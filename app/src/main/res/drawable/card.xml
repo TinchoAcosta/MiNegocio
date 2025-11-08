@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!-- Fondo gris oscuro ligeramente más claro que el fondo general -->
+    <solid android:color="#161B22" />
+
+    <!-- Bordes suaves -->
+    <corners android:radius="16dp" />
+
+    <!-- Sombra suave (solo si lo usás dentro de CardView con compatPadding=false puede notarse mejor) -->
+    <padding
+        android:left="8dp"
+        android:top="8dp"
+        android:right="8dp"
+        android:bottom="8dp" />
+
+    <!-- Opcional: contorno sutil -->
+    <stroke
+        android:width="1dp"
+        android:color="#22272E" />
+</shape>

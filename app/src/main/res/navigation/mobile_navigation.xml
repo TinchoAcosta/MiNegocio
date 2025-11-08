@@ -8,8 +8,12 @@
     <fragment
         android:id="@+id/nav_home"
         android:name="com.example.minegocio.menu.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        android:label="@string/calendario"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_turnosFragment"
+            app:destination="@id/turnosFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_gallery"
@@ -22,4 +26,18 @@
         android:name="com.example.minegocio.menu.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/turnosFragment"
+        android:name="com.example.minegocio.menu.ui.home.TurnosFragment"
+        android:label="@string/turnos_del_d_a"
+        tools:layout="@layout/fragment_turnos" >
+        <action
+            android:id="@+id/action_turnosFragment_to_informacionClienteFragment"
+            app:destination="@id/informacionClienteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/informacionClienteFragment"
+        android:name="com.example.minegocio.menu.ui.home.InformacionClienteFragment"
+        android:label="@string/informaci_n_de_contacto"
+        tools:layout="@layout/fragment_informacion_cliente" />
 </navigation>

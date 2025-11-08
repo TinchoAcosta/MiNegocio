@@ -3,15 +3,22 @@ package com.example.minegocio.request;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.example.minegocio.models.Cliente;
+import com.example.minegocio.models.DTOs.TurnoDTO;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
+import retrofit2.http.Header;
 import retrofit2.http.POST;
+import retrofit2.http.Query;
 
 public class ApiClient {
     public static final String URLBASE= "http://{ip}:5035/";
@@ -46,5 +53,11 @@ public class ApiClient {
         @FormUrlEncoded
         @POST("Usuario/login")
         Call<String> login(@Field("email") String u, @Field("clave") String c);
+
+        @GET("Turno/turnosDelDia")
+        Call<List<TurnoDTO>> getTurnosDelDia(@Header("Authorization") String token, @Query("fecha") String fecha);
+
+        @GET("Cliente")
+        Call<Cliente> getClientePorId(@Header("Authorization") String token, @Query("id") int id);
     }
 }
