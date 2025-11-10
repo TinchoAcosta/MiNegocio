@@ -2,6 +2,7 @@ package com.example.minegocio.menu.ui.home;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.Paint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -74,6 +75,8 @@ public class TurnosDelDiaAdapter extends RecyclerView.Adapter<TurnosDelDiaAdapte
                 holder.precioPromo.setVisibility(View.VISIBLE);
                 String precioPFormateado = formatoPrecio.format(turnoActual.getPrecioPromo());
                 holder.precioPromo.setText("$ "+precioPFormateado);
+                holder.precio.setPaintFlags(holder.precio.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+                holder.precio.setTextColor(Color.parseColor("#B0BEC5"));
             }
 
             String fechaString = turnoActual.getFecha();

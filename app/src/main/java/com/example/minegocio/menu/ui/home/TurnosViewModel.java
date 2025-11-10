@@ -12,6 +12,9 @@ import androidx.lifecycle.MutableLiveData;
 import com.example.minegocio.models.DTOs.TurnoDTO;
 import com.example.minegocio.request.ApiClient;
 
+import java.time.LocalDateTime;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
 
@@ -44,7 +47,20 @@ public class TurnosViewModel extends AndroidViewModel {
             @Override
             public void onResponse(Call<List<TurnoDTO>> call, Response<List<TurnoDTO>> response) {
                 if(response.isSuccessful()){
-                    mLista.postValue(response.body());
+                    List<TurnoDTO> listaOrdenada = response.body();
+                    Collections.sort(listaOrdenada, new Comparator<TurnoDTO>() {
+                        @Override
+                        public int compare(TurnoDTO t1, TurnoDTO t2) {
+                            try {
+                                LocalDateTime fecha1 = LocalDateTime.parse(t1.getFecha());
+                                LocalDateTime fecha2 = LocalDateTime.parse(t2.getFecha());
+                                return fecha1.compareTo(fecha2);
+                            } catch (Exception e) {
+                                return 0;
+                            }
+                        }
+                    });
+                    mLista.setValue(listaOrdenada);
                 }else {
                     mError.setValue("Error al conseguir los turnos");
                 }
