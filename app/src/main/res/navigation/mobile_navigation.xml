@@ -18,13 +18,17 @@
     <fragment
         android:id="@+id/nav_gallery"
         android:name="com.example.minegocio.menu.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:label="@string/mis_servicios"
+        tools:layout="@layout/fragment_gallery" >
+        <action
+            android:id="@+id/action_nav_gallery_to_formServicioFragment"
+            app:destination="@id/formServicioFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_slideshow"
         android:name="com.example.minegocio.menu.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
+        android:label="@string/pagos"
         tools:layout="@layout/fragment_slideshow" />
     <fragment
         android:id="@+id/turnosFragment"
@@ -40,4 +44,9 @@
         android:name="com.example.minegocio.menu.ui.home.InformacionClienteFragment"
         android:label="@string/informaci_n_de_contacto"
         tools:layout="@layout/fragment_informacion_cliente" />
+    <fragment
+        android:id="@+id/formServicioFragment"
+        android:name="com.example.minegocio.menu.ui.gallery.FormServicioFragment"
+        android:label="@string/gesti_n_de_mis_servicios"
+        tools:layout="@layout/fragment_form_servicio" />
 </navigation>

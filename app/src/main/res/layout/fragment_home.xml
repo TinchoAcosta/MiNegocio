@@ -71,6 +71,8 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="32dp"
+        android:background="#332020"
+        android:padding="8dp"
         android:paddingTop="8dp"
         android:textAlignment="center"
         android:textColor="#E57373"

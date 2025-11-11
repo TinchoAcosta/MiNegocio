@@ -20,4 +20,15 @@
     <string name="confirmar_fecha">Confirmar fecha</string>
     <string name="turnos_del_d_a">Turnos del día</string>
     <string name="informaci_n_de_contacto">Información de contacto</string>
+    <string name="agenda">Agenda</string>
+    <string name="mis_servicios">Mis servicios</string>
+    <string name="pagos">Pagos</string>
+    <string name="hacer_promoci_n">Hacer Promoción</string>
+    <string name="editar">Editar</string>
+    <string name="promocionar">Promocionar</string>
+    <string name="promo">Promo</string>
+    <string name="gesti_n_de_mis_servicios">Gestión de mis servicios</string>
+    <string name="duraci_n_en_minutos">Duración (en minutos)</string>
+    <string name="precio">Precio</string>
+    <string name="guardar">Guardar</string>
 </resources>

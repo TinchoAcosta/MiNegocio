@@ -13,7 +13,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.minegocio.R;
 import com.example.minegocio.models.DTOs.TurnoDTO;
-import com.example.minegocio.models.Turno;
 
 import java.text.DecimalFormat;
 import java.time.LocalDateTime;
@@ -99,7 +98,7 @@ public class TurnosDelDiaAdapter extends RecyclerView.Adapter<TurnosDelDiaAdapte
             super(itemView);
             servicio = itemView.findViewById(R.id.tvServicioBase);
             cliente = itemView.findViewById(R.id.tvCliente);
-            precio = itemView.findViewById(R.id.tvPrecioBase);
+            precio = itemView.findViewById(R.id.tvPrecioBaseTurno);
             descrip = itemView.findViewById(R.id.tvDescripcion);
             estado = itemView.findViewById(R.id.tvEstado);
             promo = itemView.findViewById(R.id.tvPromo);

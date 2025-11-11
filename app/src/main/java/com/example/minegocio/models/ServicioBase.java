@@ -1,5 +1,7 @@
 package com.example.minegocio.models;
 
+import androidx.annotation.NonNull;
+
 public class ServicioBase {
     private int id;
     private String detalle;
@@ -36,5 +38,11 @@ public class ServicioBase {
 
     public void setCategoria(String categoria) {
         this.categoria = categoria;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return categoria + " - " + detalle;
     }
 }

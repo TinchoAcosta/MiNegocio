@@ -68,7 +68,7 @@
 
         <!-- Precio base -->
         <TextView
-            android:id="@+id/tvPrecioBase"
+            android:id="@+id/tvPrecioBaseTurno"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -89,8 +89,8 @@
             android:textSize="18sp"
             android:textStyle="bold"
             android:visibility="gone"
-            app:layout_constraintBaseline_toBaselineOf="@id/tvPrecioBase"
-            app:layout_constraintStart_toEndOf="@id/tvPrecioBase" />
+            app:layout_constraintBaseline_toBaselineOf="@id/tvPrecioBaseTurno"
+            app:layout_constraintStart_toEndOf="@id/tvPrecioBaseTurno" />
 
         <!-- Descripción -->
         <TextView
@@ -103,7 +103,7 @@
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvPrecioBase" />
+            app:layout_constraintTop_toBottomOf="@id/tvPrecioBaseTurno" />
 
         <!-- Estado -->
         <TextView

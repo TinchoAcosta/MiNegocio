@@ -90,6 +90,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:background="#332020"
+        android:padding="8dp"
         android:textColor="#EF5350"
         android:textSize="14sp"
         android:textStyle="italic"

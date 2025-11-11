@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D1117"
+    android:padding="16dp"
+    tools:context=".menu.ui.gallery.FormServicioFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card"
+            android:padding="20dp">
+
+            <!-- Spinner de Servicio Base -->
+            <Spinner
+                android:id="@+id/spServicioBase"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:backgroundTint="#64B5F6"
+                android:popupBackground="#1C1F26"
+                android:spinnerMode="dropdown"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Spinner de Detalles del Servicio (deshabilitado por defecto) -->
+            <Spinner
+                android:id="@+id/spDetallesServicio"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#64B5F6"
+                android:popupBackground="#1C1F26"
+                android:spinnerMode="dropdown"
+                android:enabled="false"
+                android:alpha="0.6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/spServicioBase" />
+
+            <!-- Campo Duración -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutDuracion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:hintTextColor="#9EADC2"
+                app:boxStrokeColor="#1976D2"
+                app:boxBackgroundMode="none"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/spDetallesServicio"
+                android:hint="@string/duraci_n_en_minutos">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDuracionMinutos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textColor="#E0E0E0"
+                    android:textColorHint="#9EADC2" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Campo Precio -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutPrecio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:hintTextColor="#9EADC2"
+                app:boxStrokeColor="#1976D2"
+                app:boxBackgroundMode="none"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutDuracion"
+                android:hint="@string/precio">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPrecioServicioPropio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:textColor="#E0E0E0"
+                    android:textColorHint="#9EADC2" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Botón Guardar -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGuardarServicioPropio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/guardar"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                app:backgroundTint="#1976D2"
+                app:cornerRadius="12dp"
+                android:paddingVertical="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutPrecio" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- TextView de error -->
+        <TextView
+            android:id="@+id/tvErrorServicioForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="#332020"
+            android:padding="8dp"
+            android:textAlignment="center"
+            android:textColor="#EF5350"
+            android:textSize="14sp"
+            android:visibility="gone" />
+    </LinearLayout>
+</ScrollView>

@@ -4,7 +4,9 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 import com.example.minegocio.models.Cliente;
+import com.example.minegocio.models.DTOs.ServicioPropioDTO;
 import com.example.minegocio.models.DTOs.TurnoDTO;
+import com.example.minegocio.models.ServicioBase;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -13,11 +15,13 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
 import retrofit2.http.Query;
 
 public class ApiClient {
@@ -59,5 +63,17 @@ public class ApiClient {
 
         @GET("Cliente")
         Call<Cliente> getClientePorId(@Header("Authorization") String token, @Query("id") int id);
+
+        @GET("Servicio")
+        Call<List<ServicioPropioDTO>> getServiciosPropios(@Header("Authorization") String token);
+
+        @GET("Servicio/serviciosBase")
+        Call<List<ServicioBase>> getServiciosBase(@Header("Authorization") String token);
+
+        @POST("Servicio/crear")
+        Call<ServicioPropioDTO> crearServicio(@Header("Authorization") String token, @Body ServicioPropioDTO dto);
+
+        @PUT("Servicio/editar")
+        Call<ServicioPropioDTO> editarServicio(@Header("Authorization") String token, @Body ServicioPropioDTO dto);
     }
 }

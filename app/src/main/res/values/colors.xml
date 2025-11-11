@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Colores básicos -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Paleta base -->
     <color name="purple_500">#6200EE</color>
     <color name="purple_700">#3700B3</color>
     <color name="teal_200">#03DAC5</color>
 
+    <!-- Paleta personalizada -->
+    <color name="blue_light">#64B5F6</color> <!-- azul-celestito -->
+    <color name="blue_dark">#1976D2</color>  <!-- azul más fuerte -->
+    <color name="gray_bg_dark">#0D1117</color>
+    <color name="gray_card">#1C1F26</color>
 </resources>

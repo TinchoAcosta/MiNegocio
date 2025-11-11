@@ -1,24 +1,37 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+    <!-- Base application theme -->
     <style name="Base.Theme.MiNegocio" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <!-- Customize your light theme here. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <!-- Colores principales -->
+        <item name="colorPrimary">@color/blue_dark</item>
+        <item name="colorPrimaryVariant">@color/blue_light</item>
         <item name="colorOnPrimary">@color/white</item>
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorOnSecondary">@color/black</item>
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <!-- Color de acento (reemplaza el rosado por celeste) -->
+        <item name="colorSecondary">@color/blue_light</item>
+        <item name="colorSecondaryVariant">@color/blue_dark</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <!-- Este es importante: reemplaza el "accent" antiguo que algunos widgets aún usan -->
+        <item name="colorAccent">@color/blue_light</item>
+
+        <!-- Fondo general -->
+        <item name="android:colorBackground">@color/gray_bg_dark</item>
+
+        <!-- Botones -->
+        <item name="buttonStyle">@style/CustomButtonStyle</item>
     </style>
 
+    <!-- Estilo para campos de texto -->
     <style name="CustomTextInputLayoutDark" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-        <item name="boxBackgroundColor">#1C1F26</item>
-        <item name="boxStrokeColor">#1976D2</item>
+        <item name="boxBackgroundColor">@color/gray_card</item>
+        <item name="boxStrokeColor">@color/blue_dark</item>
         <item name="hintTextColor">#9EADC2</item>
         <item name="android:textColorHint">#9EADC2</item>
         <item name="android:textColor">#E0E0E0</item>
-        <item name="endIconTint">#64B5F6</item>
+        <item name="endIconTint">@color/blue_light</item>
     </style>
 
+    <!-- Estilos de texto para calendario -->
     <style name="CalendarHeaderTextDark" parent="TextAppearance.MaterialComponents.Subtitle1">
         <item name="android:textColor">#E0E0E0</item>
         <item name="android:textStyle">bold</item>
@@ -32,8 +45,14 @@
         <item name="android:textColor">#E0E0E0</item>
     </style>
 
+    <!-- Botones -->
+    <style name="CustomButtonStyle" parent="@android:style/Widget.Button">
+        <item name="android:backgroundTint">@color/blue_dark</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
 
-
+    <!-- Derivados del tema -->
     <style name="Theme.MiNegocio" parent="Base.Theme.MiNegocio" />
 
     <style name="Theme.MiNegocio.NoActionBar">
@@ -42,6 +61,5 @@
     </style>
 
     <style name="Theme.MiNegocio.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
     <style name="Theme.MiNegocio.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
