@@ -1,5 +1,7 @@
 package com.example.minegocio.models.DTOs;
 
+import androidx.annotation.NonNull;
+
 import java.io.Serializable;
 
 public class ServicioPropioDTO implements Serializable {
@@ -57,5 +59,11 @@ public class ServicioPropioDTO implements Serializable {
 
     public void setDetalle(String detalle) {
         this.detalle = detalle;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return categoria+" - "+detalle;
     }
 }

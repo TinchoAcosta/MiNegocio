@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="6dp"
+    app:cardUseCompatPadding="true"
+    app:cardBackgroundColor="@android:color/transparent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card"
+        android:padding="12dp">
+
+        <!-- Imagen de la promo -->
+        <ImageView
+            android:id="@+id/ivImagenPromo"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Descripción de la promo -->
+        <TextView
+            android:id="@+id/tvDetallePromo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="#E0E0E0"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:maxLines="2"
+            android:ellipsize="end"
+            app:layout_constraintTop_toBottomOf="@id/ivImagenPromo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- Detalle del servicio propio -->
+        <TextView
+            android:id="@+id/tvCategoriaPromo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="#CFD8DC"
+            android:textSize="14sp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            app:layout_constraintTop_toBottomOf="@id/tvDetallePromo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="4dp" />
+
+        <!-- Categoría y duración -->
+        <LinearLayout
+            android:id="@+id/layoutCategoriaDuracionPromo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@id/tvCategoriaPromo"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/tvDetalleServicioPropioPromo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#B0BEC5"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvDuracionPromo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="#B0BEC5"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <!-- Precio y condición -->
+        <TextView
+            android:id="@+id/tvPrecioNuevoPromo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#64B5F6"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/layoutCategoriaDuracionPromo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="6dp" />
+
+        <TextView
+            android:id="@+id/tvCondicionPromo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="#FFCC80"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/tvPrecioNuevoPromo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="4dp"
+            android:maxLines="2"
+            android:ellipsize="end" />
+
+        <!-- Fecha fin de la promo -->
+        <TextView
+            android:id="@+id/tvFechaFinPromo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="#B0BEC5"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@id/tvCondicionPromo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="4dp"/>
+
+        <!-- Botones -->
+        <LinearLayout
+            android:id="@+id/layoutBotonesPromo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:baselineAligned="false"
+            app:layout_constraintTop_toBottomOf="@id/tvFechaFinPromo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <!-- Botón Editar -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEditarPromo"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="6dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:minHeight="40dp"
+                android:paddingHorizontal="4dp"
+                android:singleLine="true"
+                android:text="@string/editar"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:backgroundTint="#1976D2"
+                app:cornerRadius="10dp"
+                app:rippleColor="#001430" />
+
+            <!-- Botón Hacer Promo -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEliminarPromo"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:minHeight="40dp"
+                android:paddingHorizontal="4dp"
+                android:singleLine="true"
+                android:text="@string/eliminar"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                app:backgroundTint="#B81F1B"
+                app:cornerRadius="10dp"
+                app:rippleColor="#360200"/>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

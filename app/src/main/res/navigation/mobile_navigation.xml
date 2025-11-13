@@ -49,4 +49,18 @@
         android:name="com.example.minegocio.menu.ui.gallery.FormServicioFragment"
         android:label="@string/gesti_n_de_mis_servicios"
         tools:layout="@layout/fragment_form_servicio" />
+    <fragment
+        android:id="@+id/promosFragment"
+        android:name="com.example.minegocio.menu.ui.promo.PromosFragment"
+        android:label="@string/mis_promociones"
+        tools:layout="@layout/fragment_promos" >
+        <action
+            android:id="@+id/action_promosFragment_to_crearPromoFragment"
+            app:destination="@id/crearPromoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/crearPromoFragment"
+        android:name="com.example.minegocio.menu.ui.promo.CrearPromoFragment"
+        android:label="@string/crear_una_nueva_promoci_n"
+        tools:layout="@layout/fragment_crear_promo" />
 </navigation>

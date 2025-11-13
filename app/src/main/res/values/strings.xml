@@ -31,4 +31,14 @@
     <string name="duraci_n_en_minutos">Duración (en minutos)</string>
     <string name="precio">Precio</string>
     <string name="guardar">Guardar</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="promociones">Promociones</string>
+    <string name="mis_promociones">Mis promociones</string>
+    <string name="crear_una_nueva_promoci_n">Crear una nueva promoción</string>
+    <string name="descripci_n_de_la_promo">Descripción de la promo</string>
+    <string name="condici_n_especial_si_la_hay">Condición especial (si la hay)</string>
+    <string name="precio_nuevo_si_lo_hay">Precio nuevo (si lo hay)</string>
+    <string name="fecha_de_finalizaci_n">Fecha de finalización</string>
+    <string name="agregar_imagen">Agregar imagen</string>
+    <string name="guardar_promo">Guardar promo</string>
 </resources>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D1117"
+    android:padding="16dp"
+    tools:context=".menu.ui.promo.CrearPromoFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Card principal -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card"
+            android:padding="20dp">
+
+            <!-- Descripción -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutDescripcionPromoForm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:hintTextColor="#9EADC2"
+                app:boxStrokeColor="#1976D2"
+                app:boxBackgroundMode="none"
+                android:hint="@string/descripci_n_de_la_promo"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDescripcionPromoForm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textColor="#E0E0E0"
+                    android:textColorHint="#9EADC2" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Condición -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutCondicionPromoForm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="@string/condici_n_especial_si_la_hay"
+                app:boxBackgroundMode="none"
+                app:boxStrokeColor="#1976D2"
+                app:hintTextColor="#9EADC2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutDescripcionPromoForm">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCondicionPromoForm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textColor="#E0E0E0"
+                    android:textColorHint="#9EADC2" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Precio -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutPrecioPromoForm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="@string/precio_nuevo_si_lo_hay"
+                app:boxBackgroundMode="none"
+                app:boxStrokeColor="#1976D2"
+                app:hintTextColor="#9EADC2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutCondicionPromoForm">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPrecioPromoForm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:textColor="#E0E0E0"
+                    android:textColorHint="#9EADC2" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Fecha fin -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutFechaPromoForm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="@string/fecha_de_finalizaci_n"
+                app:boxBackgroundMode="none"
+                app:boxStrokeColor="#1976D2"
+                app:hintTextColor="#9EADC2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutPrecioPromoForm">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etFechaPromoForm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:drawableEnd="@drawable/agenda"
+                    android:focusable="false"
+                    android:inputType="none"
+                    android:textColor="#E0E0E0"
+                    android:textColorHint="#9EADC2" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Spinner servicios -->
+            <Spinner
+                android:id="@+id/spServiciosPropiosPromoForm"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#64B5F6"
+                android:popupBackground="#1C1F26"
+                android:spinnerMode="dropdown"
+                app:layout_constraintTop_toBottomOf="@id/layoutFechaPromoForm"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Botón e imagen -->
+            <LinearLayout
+                android:id="@+id/layoutImagenPromo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/spServiciosPropiosPromoForm"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAgregarFotoPromoForm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/agregar_imagen"
+                    android:textColor="@android:color/white"
+                    app:backgroundTint="#1976D2"
+                    app:cornerRadius="10dp"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="10dp" />
+
+                <ImageView
+                    android:id="@+id/ivPortadaPromoForm"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="16dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_launcher_foreground" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Mensaje de error -->
+        <TextView
+            android:id="@+id/tvErrorPromoForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="#332020"
+            android:padding="8dp"
+            android:textAlignment="center"
+            android:textColor="#EF5350"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <!-- Botón guardar -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGuardarPromoForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/guardar_promo"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:backgroundTint="#1976D2"
+            app:cornerRadius="12dp"
+            android:paddingVertical="10dp" />
+    </LinearLayout>
+</ScrollView>

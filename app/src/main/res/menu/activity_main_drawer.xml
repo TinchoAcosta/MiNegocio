@@ -16,5 +16,10 @@
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/pagos"
             android:title="@string/pagos" />
+        <item
+            android:id="@+id/promosFragment"
+            android:icon="@drawable/promo"
+            android:title="@string/promociones"
+            />
     </group>
 </menu>

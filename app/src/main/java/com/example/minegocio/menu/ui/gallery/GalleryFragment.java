@@ -56,7 +56,7 @@ public class GalleryFragment extends Fragment {
                     public void OnHacerPromoClick(ServicioPropioDTO servicio) {
                         Bundle bundle = new Bundle();
                         bundle.putSerializable("servicio",servicio);
-                        //Navigation.findNavController(getActivity(), R.id.nav_host_fragment_content_menu).navigate(R.id.detalleInquilinoFragment,bundle);
+                        Navigation.findNavController(getActivity(), R.id.nav_host_fragment_content_menu).navigate(R.id.crearPromoFragment,bundle);
                     }
                 });
                 GridLayoutManager glm = new GridLayoutManager(getContext(),2,GridLayoutManager.VERTICAL,false);
