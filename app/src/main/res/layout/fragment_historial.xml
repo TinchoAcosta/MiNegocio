@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D1117"
+    android:padding="16dp"
+    tools:context=".menu.ui.slideshow.HistorialFragment">
+
+    <LinearLayout
+        android:id="@+id/layoutPrincipalHistorial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Card principal -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cardHistorial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card"
+            android:padding="20dp">
+
+            <!-- FILTROS POR MÉTODO DE PAGO -->
+            <LinearLayout
+                android:id="@+id/layoutFiltrosMetodosHistorial"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:weightSum="4"
+                android:paddingVertical="6dp"
+                android:paddingHorizontal="4dp"
+                android:layout_marginBottom="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+                    android:id="@+id/btEfectivoHistorial"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:minWidth="0dp"
+                    android:paddingHorizontal="4dp"
+                    android:singleLine="true"
+                    android:text="Efectivo"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white"
+                    android:textSize="11sp"
+                    app:backgroundTint="#1976D2"
+                    app:cornerRadius="10dp" />
+
+                <Button
+                    android:id="@+id/btTarjetaHistorial"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:minWidth="0dp"
+                    android:paddingHorizontal="4dp"
+                    android:singleLine="true"
+                    android:text="Tarjeta"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white"
+                    android:textSize="11sp"
+                    app:backgroundTint="#1976D2"
+                    app:cornerRadius="10dp" />
+
+                <Button
+                    android:id="@+id/btTransferHistorial"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:minWidth="0dp"
+                    android:paddingHorizontal="4dp"
+                    android:singleLine="true"
+                    android:text="Transferencia"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white"
+                    android:textSize="11sp"
+                    app:backgroundTint="#1976D2"
+                    app:cornerRadius="10dp" />
+
+                <Button
+                    android:id="@+id/btClearFiltrosHistorial"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:minWidth="0dp"
+                    android:paddingHorizontal="4dp"
+                    android:singleLine="true"
+                    android:text="Limpiar"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white"
+                    android:textSize="11sp"
+                    app:backgroundTint="#EF5350"
+                    app:cornerRadius="10dp" />
+            </LinearLayout>
+
+
+            <!-- Texto de indicación -->
+            <TextView
+                android:id="@+id/tvSeleccioneIntervaloHistorial"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Seleccione el intervalo de fechas deseado"
+                android:textColor="#E0E0E0"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutFiltrosMetodosHistorial" />
+
+            <!-- Fecha mínima -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutFechaMinimaHistorial"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Fecha mínima"
+                app:hintTextColor="#9EADC2"
+                app:boxStrokeColor="#1976D2"
+                app:boxBackgroundMode="none"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSeleccioneIntervaloHistorial">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etFechaMinimaHistorial"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:inputType="none"
+                    android:drawableEnd="@drawable/agenda"
+                    android:textColor="#E0E0E0"
+                    android:textColorHint="#9EADC2" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Fecha límite -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutFechaLimiteHistorial"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Fecha límite"
+                app:hintTextColor="#9EADC2"
+                app:boxStrokeColor="#1976D2"
+                app:boxBackgroundMode="none"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutFechaMinimaHistorial">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etFechaLimiteHistorial"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:inputType="none"
+                    android:drawableEnd="@drawable/agenda"
+                    android:textColor="#E0E0E0"
+                    android:textColorHint="#9EADC2" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- BOTÓN BUSCAR -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btBuscarHistorial"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="BUSCAR"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                app:backgroundTint="#1976D2"
+                app:cornerRadius="12dp"
+                android:paddingVertical="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutFechaLimiteHistorial" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- TextView de error -->
+        <TextView
+            android:id="@+id/tvErrorHistorial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="#332020"
+            android:padding="8dp"
+            android:textAlignment="center"
+            android:textColor="#EF5350"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</ScrollView>

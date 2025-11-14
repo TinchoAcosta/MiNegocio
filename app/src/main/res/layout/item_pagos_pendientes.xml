@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="6dp"
+    app:cardUseCompatPadding="true"
+    app:cardBackgroundColor="@android:color/transparent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card"
+        android:padding="16dp">
+
+        <!-- Fecha -->
+        <TextView
+            android:id="@+id/tvFechaPagosPendientes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#B0BEC5"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Hora -->
+        <TextView
+            android:id="@+id/tvHoraPagosPendientes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="#B0BEC5"
+            android:textSize="14sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/tvFechaPagosPendientes"
+            app:layout_constraintStart_toEndOf="@id/tvFechaPagosPendientes" />
+
+        <!-- Servicio -->
+        <TextView
+            android:id="@+id/tvServicioBasePagosPendientes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#E0E0E0"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvFechaPagosPendientes"
+            android:layout_marginTop="8dp" />
+
+        <!-- Cliente -->
+        <TextView
+            android:id="@+id/tvClientePagosPendientes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="#B0BEC5"
+            android:textSize="16sp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvServicioBasePagosPendientes" />
+
+        <!-- Precio base -->
+        <TextView
+            android:id="@+id/tvPrecioBaseTurnoPagosPendientes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="#B81F1B"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvClientePagosPendientes" />
+
+        <!-- Precio con promo -->
+        <TextView
+            android:id="@+id/tvPrecioPromoPagosPendientes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:textColor="#4A0301"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintBaseline_toBaselineOf="@id/tvPrecioBaseTurnoPagosPendientes"
+            app:layout_constraintStart_toEndOf="@id/tvPrecioBaseTurnoPagosPendientes" />
+
+        <!-- Descripción -->
+        <TextView
+            android:id="@+id/tvDescripcionPagosPendientes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:textColor="#9FA8DA"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPrecioBaseTurnoPagosPendientes" />
+
+        <!-- Estado -->
+        <TextView
+            android:id="@+id/tvEstadoPagosPendientes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="#81C784"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDescripcionPagosPendientes" />
+
+        <!-- Promo -->
+        <TextView
+            android:id="@+id/tvPromoPagosPendientes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="#64B5F6"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvEstadoPagosPendientes" />
+
+        <!-- Botón Registrar Pago -->
+        <Button
+            android:id="@+id/btRegistrarPago"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            app:backgroundTint="#1976D2"
+            app:rippleColor="#001430"
+            android:text="@string/registrar_pago"
+            android:textAllCaps="false"
+            app:layout_constraintTop_toBottomOf="@id/tvPromoPagosPendientes"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

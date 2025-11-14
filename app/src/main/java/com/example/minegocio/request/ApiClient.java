@@ -4,9 +4,11 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 import com.example.minegocio.models.Cliente;
+import com.example.minegocio.models.DTOs.HistorialPagoDTO;
 import com.example.minegocio.models.DTOs.PromoDTO;
 import com.example.minegocio.models.DTOs.ServicioPropioDTO;
 import com.example.minegocio.models.DTOs.TurnoDTO;
+import com.example.minegocio.models.Pago;
 import com.example.minegocio.models.ServicioBase;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -94,5 +96,20 @@ public class ApiClient {
         @PUT("Promo/eliminar")
         Call<ResponseBody> eliminarPromo(@Header("Authorization") String token,
                                          @Body int id);
+
+        @GET("Turno/pagoPendiente")
+        Call<List<TurnoDTO>> getTurnosPagoPendiente(@Header("Authorization") String token);
+
+        @POST("Pago/registrar")
+        Call<Pago> crearPago(@Header("Authorization") String token, @Body Pago pago);
+
+        @GET("Pago/historial")
+        Call<List<HistorialPagoDTO>> getHistorial(@Header("Authorization") String token,
+                                                       @Query("fechaMin") String fechaMin,
+                                                       @Query("fechaMax") String fechaMax,
+                                                       @Query("efectivo") Boolean efectivo,
+                                                       @Query("tarjeta") Boolean tarjeta,
+                                                       @Query("transfer") Boolean transfer
+        );
     }
 }

@@ -29,7 +29,14 @@
         android:id="@+id/nav_slideshow"
         android:name="com.example.minegocio.menu.ui.slideshow.SlideshowFragment"
         android:label="@string/pagos"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_slideshow" >
+        <action
+            android:id="@+id/action_nav_slideshow_to_pagosPendientesFragment"
+            app:destination="@id/pagosPendientesFragment" />
+        <action
+            android:id="@+id/action_nav_slideshow_to_historialFragment"
+            app:destination="@id/historialFragment" />
+    </fragment>
     <fragment
         android:id="@+id/turnosFragment"
         android:name="com.example.minegocio.menu.ui.home.TurnosFragment"
@@ -63,4 +70,32 @@
         android:name="com.example.minegocio.menu.ui.promo.CrearPromoFragment"
         android:label="@string/crear_una_nueva_promoci_n"
         tools:layout="@layout/fragment_crear_promo" />
+    <fragment
+        android:id="@+id/pagosPendientesFragment"
+        android:name="com.example.minegocio.menu.ui.slideshow.PagosPendientesFragment"
+        android:label="@string/pagos_pendientes"
+        tools:layout="@layout/fragment_pagos_pendientes" >
+        <action
+            android:id="@+id/action_pagosPendientesFragment_to_registrarPagoFormFragment"
+            app:destination="@id/registrarPagoFormFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrarPagoFormFragment"
+        android:name="com.example.minegocio.menu.ui.slideshow.RegistrarPagoFormFragment"
+        android:label="@string/registrar_un_nuevo_pago"
+        tools:layout="@layout/fragment_registrar_pago_form" />
+    <fragment
+        android:id="@+id/historialFragment"
+        android:name="com.example.minegocio.menu.ui.slideshow.HistorialFragment"
+        android:label="@string/historial_de_pagos"
+        tools:layout="@layout/fragment_historial" >
+        <action
+            android:id="@+id/action_historialFragment_to_listaPagosHistorialFragment"
+            app:destination="@id/listaPagosHistorialFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listaPagosHistorialFragment"
+        android:name="com.example.minegocio.menu.ui.slideshow.ListaPagosHistorialFragment"
+        android:label="@string/historial_de_pagos"
+        tools:layout="@layout/fragment_lista_pagos_historial" />
 </navigation>

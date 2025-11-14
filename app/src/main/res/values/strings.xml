@@ -41,4 +41,12 @@
     <string name="fecha_de_finalizaci_n">Fecha de finalización</string>
     <string name="agregar_imagen">Agregar imagen</string>
     <string name="guardar_promo">Guardar promo</string>
+    <string name="historial">HISTORIAL</string>
+    <string name="ver_pagos_pendientes">VER PAGOS PENDIENTES</string>
+    <string name="pagos_pendientes">Pagos pendientes</string>
+    <string name="registrar_pago">REGISTRAR PAGO</string>
+    <string name="monto_pagado">Monto pagado</string>
+    <string name="fecha_del_pago">Fecha del pago</string>
+    <string name="historial_de_pagos">Historial de pagos</string>
+    <string name="registrar_un_nuevo_pago">Registrar un nuevo pago</string>
 </resources>
