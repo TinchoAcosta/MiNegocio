@@ -98,4 +98,9 @@
         android:name="com.example.minegocio.menu.ui.slideshow.ListaPagosHistorialFragment"
         android:label="@string/historial_de_pagos"
         tools:layout="@layout/fragment_lista_pagos_historial" />
+    <fragment
+        android:id="@+id/logoutFragment"
+        android:name="com.example.minegocio.menu.ui.logout.LogoutFragment"
+        android:label="@string/cerrar_sesi_n"
+        tools:layout="@layout/fragment_logout" />
 </navigation>

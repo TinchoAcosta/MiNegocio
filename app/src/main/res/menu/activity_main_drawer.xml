@@ -21,5 +21,10 @@
             android:icon="@drawable/promo"
             android:title="@string/promociones"
             />
+        <item
+            android:id="@+id/logoutFragment"
+            android:icon="@drawable/logout"
+            android:title="@string/cerrar_sesi_n"
+            />
     </group>
 </menu>

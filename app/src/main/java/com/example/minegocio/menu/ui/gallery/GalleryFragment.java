@@ -59,7 +59,7 @@ public class GalleryFragment extends Fragment {
                         Navigation.findNavController(getActivity(), R.id.nav_host_fragment_content_menu).navigate(R.id.crearPromoFragment,bundle);
                     }
                 });
-                GridLayoutManager glm = new GridLayoutManager(getContext(),2,GridLayoutManager.VERTICAL,false);
+                GridLayoutManager glm = new GridLayoutManager(getContext(),1,GridLayoutManager.VERTICAL,false);
                 binding.rvMisServicios.setLayoutManager(glm);
                 binding.rvMisServicios.setAdapter(la);
             }
