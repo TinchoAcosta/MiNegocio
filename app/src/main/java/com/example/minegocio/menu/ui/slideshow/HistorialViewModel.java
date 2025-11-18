@@ -7,6 +7,9 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 public class HistorialViewModel extends AndroidViewModel {
     private MutableLiveData<String> mError = new MutableLiveData<>();
     private MutableLiveData<Boolean> mFlagTarjeta = new MutableLiveData<>();
@@ -58,6 +61,21 @@ public class HistorialViewModel extends AndroidViewModel {
 
         if(hasta == null || hasta.isEmpty()) {
             mError.setValue("Error: debe seleccionar la fecha límite");
+            return false;
+        }
+
+        try {
+            DateTimeFormatter f = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
+            LocalDate fechaDesde = LocalDate.parse(desde, f);
+            LocalDate fechaHasta = LocalDate.parse(hasta, f);
+
+            if(fechaHasta.isBefore(fechaDesde)) {
+                mError.setValue("Error: la fecha límite debe ser posterior a la fecha mínima");
+                return false;
+            }
+        } catch (Exception e) {
+            mError.setValue("Error: formato de fecha inválido");
             return false;
         }
 
